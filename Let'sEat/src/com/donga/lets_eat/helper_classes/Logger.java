@@ -1,4 +1,4 @@
-package com.donga.lets_eat;
+package com.donga.lets_eat.helper_classes;
 
 import java.util.ArrayList;
 

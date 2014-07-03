@@ -4,6 +4,7 @@ package com.donga.lets_eat.activities;
 import com.donga.lets_eat.R;
 import com.donga.lets_eat.R.id;
 import com.donga.lets_eat.R.layout;
+import com.donga.lets_eat.helper_classes.Constants;
 
 import android.os.Bundle;
 import android.animation.AnimatorSet;
@@ -18,9 +19,13 @@ import android.widget.TextView;
 
 public class SplashScreenActivity extends Activity {
 
+	Intent mIntent;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		mIntent=getIntent();
+		
+		final String intentExtraString=mIntent.getStringExtra(Constants.INTENT_EXTRA_KEY);
 
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -71,6 +76,7 @@ public class SplashScreenActivity extends Activity {
 					Thread.sleep(2500);
 					Intent intent = new Intent(getApplicationContext(),
 							MainActivity.class);
+					intent.putExtra(Constants.INTENT_EXTRA_KEY, intentExtraString);
 					startActivity(intent);
 					SplashScreenActivity.this.finish();
 				} catch (InterruptedException e) {
