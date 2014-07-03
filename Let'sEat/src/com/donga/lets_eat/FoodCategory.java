@@ -21,6 +21,7 @@ public class FoodCategory {
 		imageBitmap=null;
 		//updated
 		//updated 2nd time
+		//ss
 	}
 	
 	public Bitmap getImageBitmap() {
