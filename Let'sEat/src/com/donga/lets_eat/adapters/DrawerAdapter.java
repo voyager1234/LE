@@ -59,9 +59,12 @@ public class DrawerAdapter extends BaseAdapter {
 		ImageView categoryImageView=(ImageView) view.findViewById(R.id.drawerItemCategoryImageView);
 		
 		categoryNameTextView.setText(restaurant.getAllFoodCategories().get(position).getCategoryNameString());
-		categoryImageView.setImageResource(R.drawable.ic_launcher);
-		
-		
+		if (restaurant.getAllFoodCategories().get(position).getImageBitmap()==null) {
+			categoryImageView.setImageResource(R.drawable.ic_launcher);
+			new ImageViewUpdater(categoryImageView, restaurant.getAllFoodCategories().get(position).getImageBitmap()).execute(restaurant.getAllFoodCategories().get(position).getCategoryImageUrl());
+		}else {
+			categoryImageView.setImageBitmap(restaurant.getAllFoodCategories().get(position).getImageBitmap());
+		}
 		
 		
 		return view;
@@ -70,10 +73,12 @@ public class DrawerAdapter extends BaseAdapter {
 	private class ImageViewUpdater extends AsyncTask<String, Void, Bitmap>{
 
 		ImageView imgView;
+		Bitmap bitmap;
 		
-		public ImageViewUpdater(ImageView imgView) {
+		public ImageViewUpdater(ImageView imgView, Bitmap bmp) {
 			// TODO Auto-generated constructor stub
 			this.imgView=imgView;
+			this.bitmap=bmp;
 		}
 		
 		@Override
@@ -93,6 +98,8 @@ public class DrawerAdapter extends BaseAdapter {
 	            Log.e("Error", e.getMessage());
 	            e.printStackTrace();
 	        }
+	        
+	        bitmap=mIcon11;
 	        return mIcon11;
 		}
 		
