@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dark_blue">#497BB7</color>
+    <color name="light_blue">#36A4DC</color>
+    <color name="very_dark_blue">#13263B</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="deep_red">#BA4444</color>
+    <color name="dark_red">#BA3636</color>
+    <color name="purple">#6B44BA</color>
+    <color name="greenish_blue">#44AEBA</color>
+    <color name="light_greenish_blue">#9AE8F1</color>
+    <color name="bluish_green">#086A87</color>
+    <color name="light_green_1">#3EBA36</color>
+    <color name="deep_green_1">#0B6138</color>
+    <color name="very_light_green">#71E300</color>
+    <color name="grey">#B0B0B0</color>
+    <color name="light_grey">#D8D8D8</color>
+    <color name="dark_grey">#8E8E8E</color>
+    <color name="very_dark_grey">#656565</color>
+    <color name="light_orange">#FDA533</color>
+    <color name="dark_orange">#F38B03</color>
+    <color name="deep_green">#173B0B</color>
+    <color name="medium_deep_green">#21610B</color>
+    <color name="green">#298A08</color>
+    <color name="light_green">#04B404</color>
+    <color name="light_pink">#F595B0</color>
+    <color name="hot_pink">#FB5D8A</color>
+    <color name="orange_red_shade">#FB5D5D</color>
+    <color name="brown">#773A3A</color>
+    <color name="brick_red">#FA5858</color>
+    <color name="medium_brick_red">#F78181</color>
+    <color name="light_brick_red">#F5A9A9</color>
+    <color name="yellow">#FACC2E</color>
+    
+    <!-- pager tab strip colors  -->
+    <color name="background_tab_pressed">#6633B5E5</color>
+    
+    
+</resources>

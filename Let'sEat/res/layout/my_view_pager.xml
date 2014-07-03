@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/frameContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/linearContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <com.zulkarnine.chex.specials.PagerSlidingTabStrip
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="48dip" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/myPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                
+
+                <LinearLayout
+                    android:id="@+id/welcomeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/welcomeTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Demo Text" />
+                </LinearLayout>
+            </android.support.v4.view.ViewPager>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/checklistFrameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" >
+
+        <!-- <Button
+            android:id="@+id/multifunctionButton"
+            android:layout_width="@dimen/checklist_multifunction_button_size"
+            android:layout_height="@dimen/checklist_multifunction_button_size"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/checklist_multifunction_button_margin_right"
+            android:layout_marginTop="@dimen/checklist_multifunction_button_margin_top"
+            android:background="@drawable/multifunction_button"
+            android:onClick="showCustomMenu" /> -->
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/drawerList"
+        android:layout_width="@dimen/drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/very_dark_blue"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/white"
+        android:dividerHeight="@dimen/drawer_divider_height" />
+
+</android.support.v4.widget.DrawerLayout>
