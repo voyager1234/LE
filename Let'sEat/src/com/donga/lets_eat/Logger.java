@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import android.util.Log;
 
 public class Logger {
+	//web commmit
 	final static String logTag="LetsEat";
 	
 	public static void log(String message) {
